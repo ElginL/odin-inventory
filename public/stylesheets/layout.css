@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgrey;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.logo-container > img {
+    width: 60px;
+    height: 60px;
+}
+
+main {
+    padding: 70px;
+    padding-top: 200px;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-items li {
+    transition: transform 0.3s;
+}
+
+.nav-items li:hover {
+    transform: scale(1.2);
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #0076CE;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.topbar {
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.logo-container > h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+@media (max-width: 920px) {
+    .logo-container > h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-items a {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 200px 30px 70px 30px;
+    }
+}

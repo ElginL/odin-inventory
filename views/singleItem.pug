@@ -1,0 +1,23 @@
+extends layout
+
+block append head
+    link(rel='stylesheet' href="/stylesheets/singleItem.css")
+
+block content
+    div.item
+        div.single-item-container
+            div.single-item
+                h1 !{item.name}
+                if item.imgFilename
+                    img.big-item-img(src=`/uploads/${item.imgFilename}` alt="item")
+                else
+                    div.no-item-container
+                        p No Item Image... <br/> Perhaps add one?
+                p Description: !{item.description}
+                p Category: !{item.category.name}
+                p Price Each: !{item.price}
+                p Stock Count: !{item.stockCount}
+            div.item-btn-container
+                form(action=`./${id}/delete` method="post")
+                    button.delete-btn(name="delete") Delete
+                a.update-btn(href=`./${id}/update`) Update

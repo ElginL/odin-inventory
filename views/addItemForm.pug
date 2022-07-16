@@ -1,0 +1,17 @@
+extends layout
+
+block append head
+    link(rel='stylesheet' href="/stylesheets/form.css")
+
+block content
+    div.form-container
+        h1 Add Item Form <br/> (!{category})
+        img.img-preview
+        form.form(method="POST" action=`/categories/${category}/addItem` enctype="multipart/form-data")
+            include ./partials/addFormFields.pug
+            label.upload-btn(for="image") Update Image
+                input.upload-file-btn(id="image" name="image" type="file" onchange="loadFile(event)")
+            if errors
+                for error in errors
+                    p.error-message !{error.msg}
+            input.submit-btn(type="submit" value="Submit")

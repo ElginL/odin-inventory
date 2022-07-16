@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div.welcome-container
+        div.left-container
+            p.welcome-message Welcome to Food Inventory <br/>
+            p.welcome-message Introducing a seamless way to keep track of your food inventory
+            div.key-features-container
+                h2 Key Features
+                div.home-features
+                    div.feature-container
+                        p Accurate Data
+                        img.index-img(src="/images/accurate.png")
+                    div.feature-container
+                        p Fast Loading
+                        img.index-img(src="/images/fast.png")
+                    div.feature-container
+                        p Safe And Secure
+                        img.index-img(src="/images/safe.png")
+        div.summary-overall-container
+            h2 Inventory Summary
+            ul.summary-list
+                each val, key in counts 
+                    li.summary-container
+                        p.summary-desc !{key} 
+                        p.count Count: !{val}
+            p.correct-date Correct as of !{dateNow}, !{timeNow}

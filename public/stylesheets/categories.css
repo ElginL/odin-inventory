@@ -1,0 +1,70 @@
+.all-category-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.category-container {
+    border: 1px solid black;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+#Fish {
+    background-image: url('../images/fish.jpg');
+}
+
+#Poultry {
+    background-image: url('../images/chicken.jpg')
+}
+
+#Vegetable {
+    background-image: url('../images/vegetable.jpg')
+}
+
+#Fruits {
+    background-image: url('../images/fruit.jpg')
+}
+
+#Dairy {
+    background-image: url('../images/dairy.jpg')
+}
+
+.category-container:hover {
+    transform: scale(1.1);
+}
+
+.category-container > h3 {
+    font-size: 1.8rem;
+}
+
+.category-container > p {
+    font-size: 1.6rem;
+}
+
+.category-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.category-instruction {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+@media(max-width: 1010px) {
+    .category-container {
+        width: 75%;
+    }
+}

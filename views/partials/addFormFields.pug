@@ -1,0 +1,12 @@
+div.field-container
+    label(for="name") Name
+    input(type="text" required=true name="name" placeholder="Food name" value = item ? item.name : '' minlength=3 maxlength=20)
+div.field-container
+    label(for="description") Description
+    input(type="text" required=true name="description" placeholder="Description" value = item ? item.description : '' minlength=3 maxlength=30)
+div.field-container
+    label(for="price") Price
+    input(type="number" step=".01" required=true name="price" placeholder="Price per qty" value = item ? item.price : null)
+div.field-container
+    label(for="stockCount") Stock Remaining
+    input(type="number" min="0" step="1" required=true name="stockCount" placeholder="Stock Qty Left" value = item ? item.stockCount : null)

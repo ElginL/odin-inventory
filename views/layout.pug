@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        block head
+            title Inventory
+            script(type='text/javascript')
+            link(rel="stylesheet" href="/stylesheets/layout.css")
+            link(rel="stylesheet" href="/stylesheets/index.css")
+            link(rel="preconnect" href="https://fonts.googleapis.com")
+            link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+            link(href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@300&display=swap" rel="stylesheet")
+            script(src="/javascripts/fileUpload.js")
+    body
+        header.topbar
+            a.logo-container(href="/")
+                img(src="/images/inventory-management2.jpg")
+                h1 Food Inventory
+            nav
+                ul.nav-items
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/all-stocks") Food Stocks
+                    li
+                        a(href="/categories") Categories
+        main
+            block content

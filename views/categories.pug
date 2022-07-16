@@ -1,0 +1,13 @@
+extends layout
+
+block append head
+    link(rel="stylesheet" href="/stylesheets/categories.css")
+
+block content
+    h2.category-title Food Categories
+    p.category-instruction Select one to filter
+    div.all-category-container
+        each category in categories
+            a.category-container(id=category.name href=`/categories/${category.name}`)
+                h3 !{category.name}
+                p !{category.description}

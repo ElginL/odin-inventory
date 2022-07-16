@@ -1,0 +1,82 @@
+.category-dropdown {
+    font-size: 1.4rem;
+    padding: 5px;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.form-container > h1 {
+    text-align: center;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.field-container > label {
+    font-size: 1.3rem;
+}
+
+.field-container > input {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+
+.img-preview {
+    align-self: center;
+    margin: 50px;
+    width: 400px;
+    height: 250px;
+}
+
+.submit-btn {
+    align-self: center;
+    padding: 20px 0;
+    font-size: 1.5rem;
+    background-color: #0099FF;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: #0b72b8;
+}
+
+.upload-btn {
+    background-color: orange;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    transition: background-color 0.2s;
+}
+
+.upload-file-btn {
+    display: none;
+}
+
+.upload-btn:hover {
+    cursor: pointer;
+    background-color: rgb(212, 144, 18);
+}

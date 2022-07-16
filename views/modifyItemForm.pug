@@ -1,0 +1,25 @@
+extends layout
+
+block append head
+    link(rel='stylesheet' href="/stylesheets/form.css")
+
+block content
+    div.form-container
+        h1 Modify Item Form <br/> (!{item.name})
+        img.img-preview(src= item.imgFilename ? `/uploads/${item.imgFilename}` : null)
+        form.form(method="post" action=`./update` enctype="multipart/form-data")
+            include ./partials/addFormFields.pug
+            div.field-container
+                label(for="category") Category
+                select.category-dropdown(name="category")
+                    each cat in allCategories
+                        if cat.name === item.category.name
+                            option(value=cat.name selected) !{cat.name}
+                        else
+                            option(value=cat.name) !{cat.name}
+            label.upload-btn(for="image") Update Image
+                input.upload-file-btn(id="image" name="image" type="file" onchange="loadFile(event)")
+            if errors
+                for error in errors
+                    p.error-message !{error.msg}
+            input.submit-btn(type="submit" value="Confirm Changes")

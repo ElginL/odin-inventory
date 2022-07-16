@@ -1,0 +1,10 @@
+extends layout
+
+block append head
+    link(rel='stylesheet' href="/stylesheets/categoryItems.css")
+
+block content
+    div.title-container
+        h2.all-food-title !{category} Stock
+        a.add-item-btn(href=`/categories/${category}/addItem`) Add Item
+    include ./partials/allItems.pug

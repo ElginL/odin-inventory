@@ -1,0 +1,20 @@
+block append head
+    link(rel='stylesheet' href="/stylesheets/allItems.css")
+
+div.all-items-container
+    each item in items
+        a.item-container(href=`/categories/${category}/${item._id}`)
+            h3.item-name !{item.name}
+            if item.imgFilename
+                img.item-img(src=`/uploads/${item.imgFilename}` alt="item")
+            else
+                div.no-item-container
+                    p No Item Image... <br/> Perhaps add one?
+            p.item-description !{item.description}
+            p.item-price $!{item.price}
+            if (item.stockCount < 20)
+                div.price-container
+                    img.danger-sign(src="/images/danger.svg")
+                    p.dangerCount Stock Left: !{item.stockCount}
+            else
+                p.safeCount Stock Left: !{item.stockCount}
