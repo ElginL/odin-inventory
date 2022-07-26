@@ -83,7 +83,7 @@ exports.handleAddItemForm = [
                     category: results,
                     price: req.body.price,
                     stockCount: req.body.stockCount,
-                    imgFilename: req.file.filename ? req.file.filename : ""
+                    imgFilename: req.file ? req.file.filename : ""
                 });
 
                 newItem.save(err => {

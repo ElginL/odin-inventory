@@ -3,7 +3,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const helmet = require('helmet');
 
 const indexRouter = require('./routes/index');
 const categoryRouter = require('./routes/categoryRouter');
@@ -11,7 +10,6 @@ const categoryRouter = require('./routes/categoryRouter');
 require('dotenv').config()
 
 const app = express();
-app.use(helmet());
 
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
